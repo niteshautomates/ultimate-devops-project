@@ -13,7 +13,7 @@ variable "force_detach_policies" {
 
 variable "assume_role_policy" {
   description = "Policy that grants an entity permission to assume the role"
-  type        = string
+  type        = any
   default     = "dummy"
 }
 
@@ -35,9 +35,7 @@ variable "custom_iam_policies" {
     description     = string
     policy_document = string
   }))
-  default = [{
-
-  }]
+  default = []
 }
 
 
