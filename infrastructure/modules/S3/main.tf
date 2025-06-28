@@ -12,7 +12,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "name" {
   bucket = aws_s3_bucket.s3_bucket.bucket
   rule {
     apply_server_side_encryption_by_default {
-      kms_master_key_id = var.aws_kms_key_id
+      kms_master_key_id = var.kms_master_key_arn
       sse_algorithm     = "aws:kms"
     }
   }
@@ -37,7 +37,7 @@ resource "aws_s3_bucket_public_access_block" "s3_bucket_access_block" {
 
 resource "aws_s3_bucket_policy" "s3_bucket_polcy" {
   bucket = aws_s3_bucket.s3_bucket.id
-  policy = jsondecode({
+  policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
         {

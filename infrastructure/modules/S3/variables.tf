@@ -8,6 +8,6 @@ variable "tags" {
 }
 
 
-variable "aws_kms_key_id" {
+variable "kms_master_key_arn" {
   type = string
 }
