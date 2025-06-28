@@ -1,7 +1,7 @@
 resource "aws_iam_role" "iam_role" {
   name                  = var.role_name
   force_detach_policies = var.force_detach_policies
-  assume_role_policy    = jsonencode(var.assume_role_policy)
+  assume_role_policy    = jsonencode(var.assume_role_policy) #jsonencode encodes a given value to a string using JSON syntax
   description           = var.description == "" ? var.role_name : var.description
   max_session_duration  = var.max_session_duration
   path                  = var.path
