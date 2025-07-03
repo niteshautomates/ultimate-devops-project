@@ -20,3 +20,10 @@ variable "project_name" {
   type    = string
   default = "ultimate-devops-project"
 }
+variable "AWS_ACCESS_KEY" {
+  type = string
+
+}
+variable "AWS_SECRET_KEY" {
+  type = string
+}
