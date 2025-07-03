@@ -10,6 +10,12 @@ terraform {
         version = "~> 3.0"
     }
   }
+  cloud {
+    organization = "NiteshAutomates"
+    workspaces {
+      name = "ultimate-devops-infrastructure"
+    }
+  }
 }
 
 provider "aws" {
