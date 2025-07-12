@@ -14,4 +14,5 @@ data "aws_ami" "this" {
 resource "aws_instance" "bastion-server" {
   instance_type = var.instance_type
   ami = data.aws_ami.this.image_id
+  key_name = var.key_name
 }

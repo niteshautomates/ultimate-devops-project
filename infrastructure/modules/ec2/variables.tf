@@ -11,5 +11,7 @@ variable "instance_type" {
 
 variable "key_name" {
   description = ".pem key file name to ssh into bastion server"
+  type = string
+  default = "ssh_key_ap"
 }
 
