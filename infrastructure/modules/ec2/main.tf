@@ -6,8 +6,12 @@ data "aws_ami" "this" {
     values = ["arm64"]
   }
   filter {
+    name = "virtualization-type"
+    values = ["hvm"]
+  }
+ filter {
     name   = "name"
-    values = ["ami-021a584b49*"]
+     values = ["ubuntu/images/hvm-ssd/ubuntu-*"]
   }
 }
 
