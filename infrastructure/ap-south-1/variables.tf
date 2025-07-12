@@ -20,3 +20,8 @@ variable "project_name" {
   type    = string
   default = "ultimate-devops-project"
 }
+
+variable "key_name" {
+  type = string
+  default = "ssh_key_ap"
+}
