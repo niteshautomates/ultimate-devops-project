@@ -10,7 +10,7 @@ locals {
 
 module "IAM" {
   source = "../modules/IAM"
-   assume_role_policy = {
+  assume_role_policy = {
     Version = "2012-10-17"
     Statement = [
       {
@@ -36,4 +36,13 @@ module "s3" {
   source             = "../modules/S3"
   tags               = local.common_tags
   kms_master_key_arn = module.kms.kms_master_key_arn
+
+}
+
+
+# Bastion Server
+module "bastion-server" {
+  source = "../modules/ec2"
+  name = ""
+  key_name = var.key_name
 }

@@ -1,7 +1,7 @@
 variable "role_name" {
   description = "This is name for IAM role"
   type        = string
-  default     = "value"
+  default     = "EC2AssumeRole"
 }
 
 
