@@ -22,6 +22,6 @@ variable "project_name" {
 }
 
 variable "key_name" {
-  type = string
+  type    = string
   default = "ssh_key_ap"
 }
