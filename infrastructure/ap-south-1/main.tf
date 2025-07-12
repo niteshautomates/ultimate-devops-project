@@ -42,7 +42,7 @@ module "s3" {
 
 # Bastion Server
 module "bastion-server" {
-  source = "../modules/ec2"
-  name = ""
+  source   = "../modules/ec2"
+  name     = "bastian-server"
   key_name = var.key_name
 }
