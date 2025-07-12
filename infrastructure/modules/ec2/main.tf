@@ -7,7 +7,7 @@ data "aws_ami" "this" {
   }
   filter {
     name   = "name"
-    values = ["al2025-ami-2025*"]
+    values = ["ami-021a584b49*"]
   }
 }
 
