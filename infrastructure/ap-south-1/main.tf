@@ -45,4 +45,5 @@ module "bastion-server" {
   source   = "../modules/ec2"
   name     = "bastian-server"
   key_name = var.key_name
+
 }

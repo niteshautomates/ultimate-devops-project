@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="837fe1b2-ba6f-44d3-b145-358468340024" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/terraform.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/ap-south-1/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/ap-south-1/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/ap-south-1/provider.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/ap-south-1/provider.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/ap-south-1/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/ap-south-1/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/modules/ec2/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/modules/ec2/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/modules/ec2/output.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/modules/ec2/output.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/modules/ec2/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/modules/ec2/variables.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
