@@ -1,6 +1,7 @@
 variable "name" {
   type = string
   description = "EC2 server name"
+  default = "bastian-server"
 }
 
 variable "instance_type" {
