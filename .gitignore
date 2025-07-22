@@ -5,3 +5,4 @@
 *.tfvars
 *.tfvars.json
 .idea/
+provider.tf
