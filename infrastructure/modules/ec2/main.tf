@@ -1,23 +1,13 @@
-data "aws_ami" "this" {
-  most_recent = true
-  owners      = ["amazon"]
-  filter {
-    name   = "architecture"
-    values = ["arm64"]
-  }
-  filter {
-    name = "virtualization-type"
-    values = ["hvm"]
-  }
- filter {
-    name   = "name"
-     values = ["ubuntu/images/hvm-ssd/ubuntu-*"]
-  }
-}
+
 
 resource "aws_instance" "bastion-server" {
+  
   instance_type = var.instance_type
-  ami = data.aws_ami.this.image_id
+  ami = "ami-0861f4e788f5069dd" 
+  vpc_security_group_ids = [var.vpc_security_group_id]
+  #data.aws_ami.this.image_id
+  subnet_id = var.subnet_id
+  associate_public_ip_address = true
   key_name = var.key_name
   tags = {
     Name = var.name
