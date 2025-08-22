@@ -39,11 +39,20 @@ module "s3" {
 
 }
 
+#************************** Compute VPC **************************#
+module "compute_vpc" {
+  source      = "../modules/vpc"
+  environment = var.environment
+
+}
 
 # Bastion Server
 module "bastion-server" {
-  source   = "../modules/ec2"
-  name     = "bastian-server"
-  key_name = var.key_name
+  count                 = 1
+  source                = "../modules/ec2"
+  name                  = "bastian-server-${count.index}"
+  key_name              = var.key_name
+  vpc_security_group_id = module.compute_vpc.vpc_security_group_id
+  subnet_id             = module.compute_vpc.subnet_id
 
 }

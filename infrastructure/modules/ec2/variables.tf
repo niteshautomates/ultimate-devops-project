@@ -16,3 +16,14 @@ variable "key_name" {
   default = "ssh_key_ap"
 }
 
+variable "vpc_security_group_id" {
+  description = "VPC security group ID"
+  type        = string
+  
+}
+
+variable "subnet_id" {
+  description = "Subnet ID"
+  type        = string
+  
+}
